@@ -7,21 +7,23 @@ modules:
   - Footer
 bannerBrand:
   bgImage: '/bg.svg'
-  title: vuepress-reco
-  description: 一款简洁的 vuepress 博客 & 文档 主题。
-  tagline: vuepress-theme-reco 2.0 继续坚持简洁的风格，所有功能开箱即用，首页模块化组装，使用 tailwindcss 书写样式，将 Vite 作为默认编译器。你只需要负责内容创作，其他请交给我。
+  title: "程序猿的笔记" # Changed
+  description: "一个记录技术学习、问题解决和项目经验的个人博客。" # Changed
+  tagline: "分享知识，记录成长。" # Changed
   buttons:
-    - { text: Guide, link: '/docs/guide/introduce' }
-    - { text: Default Style, link: '/docs/style-default-api/introduce', type: 'plain' }
+    - { text: Guide, link: '/docs/guide/introduce' } # Kept as is, may need review later
+    - { text: Default Style, link: '/docs/style-default-api/introduce', type: 'plain' } # Kept as is, may need review later
   socialLinks:
-    - { icon: 'LogoGithub', link: 'https://github.com/vuepress-reco/vuepress-theme-reco' }
+    - { icon: 'LogoGithub', link: 'https://github.com/iwangxi' } # Updated
 blog:
   socialLinks:
-    - { icon: 'LogoGithub', link: 'https://github.com/recoluan' }
+    - { icon: 'LogoGithub', link: 'https://github.com/iwangxi' } # Updated
 isShowTitleInHome: true
-actionText: About
-actionLink: /views/other/about
+actionText: About # Kept as is, may need review later
+actionLink: /views/other/about # Kept as is, may need review later
 ---
+
+欢迎来到程序猿的笔记，一个基于 VuePress 和 vuepress-theme-reco 构建的博客。
 
 ## 快速开始
 
