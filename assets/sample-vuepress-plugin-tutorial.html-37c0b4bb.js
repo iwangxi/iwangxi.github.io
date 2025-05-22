@@ -1,0 +1,1 @@
+import{_ as e,p as t,q as s,s as o}from"./framework-aa5c4115.js";const r={},a=o("p",null,"This is a short tutorial on how to get started with creating a VuePress plugin.",-1),l=[a];function n(i,c){return t(),s("div",null,l)}const u=e(r,[["render",n],["__file","sample-vuepress-plugin-tutorial.html.vue"]]);export{u as default};
