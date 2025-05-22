@@ -1,0 +1,53 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Or your default branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Not strictly necessary for this script but good practice
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' # Or a version compatible with your VuePress setup
+
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build and Deploy
+        env:
+          GIT_USER: iwangxi # Username for commit in target repo
+        run: |
+          # Configure Git for the deploy script
+          # The deploy.sh script pushes to iwangxi.github.io
+          # It might try to commit as the user who triggered the action.
+          # Setting user explicitly for the commit inside deploy.sh if it doesn't do so.
+          # However, the provided deploy.sh does `git commit -m 'deploy'`
+          # which will use the action's default git user.
+          # For pushing to another repo using SSH, SSH keys must be set up.
+
+          # Make deploy.sh executable
+          chmod +x deploy.sh
+          ./deploy.sh
+        # The deploy.sh script uses SSH (git@github.com:iwangxi/iwangxi.github.io.git).
+        # This requires an SSH deploy key to be configured.
+        # The public key should be added to the iwangxi.github.io repository's deploy keys.
+        # The private key should be added as a secret (e.g., GIT_SSH_PRIVATE_KEY) in this repository's settings.
+        # The following is an example of how to use an SSH key, assuming the secret is named GIT_SSH_PRIVATE_KEY
+        # You might need to adjust deploy.sh or add steps here to load the SSH key.
+        # Example to add SSH key before running deploy.sh:
+        # - name: Setup SSH Key
+        #   if: env.GIT_SSH_PRIVATE_KEY != ''
+        #   run: |
+        #     mkdir -p ~/.ssh
+        #     echo "${{ secrets.GIT_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        #     chmod 600 ~/.ssh/id_rsa
+        #     ssh-keyscan github.com >> ~/.ssh/known_hosts
