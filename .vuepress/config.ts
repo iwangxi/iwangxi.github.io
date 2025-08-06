@@ -7,9 +7,9 @@ export default defineUserConfig({
   description: "Just to study", // Keeping this as is, can be changed later if needed
   theme: recoTheme({
     style: "@vuepress-reco/style-default",
-    logo: "/logo.png",
-    author: "reco_luan", // Keeping this as is, can be changed later
-    authorAvatar: "/head.png", // Keeping this as is, can be changed later
+    logo: "/pixel-logo.svg",
+    author: "程序猿", // 像素游戏风格作者名
+    authorAvatar: "/pixel-avatar.svg", // 像素风格头像
     docsRepo: "https://github.com/iwangxi", // Keeping this as is
     docsBranch: "main", // Keeping this as is
     docsDir: "example", // Keeping this as is, likely refers to a directory for documentation content

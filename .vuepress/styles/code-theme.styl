@@ -1,0 +1,203 @@
+/**
+ * 像素游戏风格代码高亮主题
+ * Pixel Game Style Code Highlighting Theme
+ */
+
+// 代码块基础样式
+.theme-default-content
+  pre, pre[class*="language-"]
+    background: var(--pixel-bg-tertiary) !important
+    border: 3px solid var(--pixel-primary) !important
+    border-radius: 0 !important
+    margin: 16px 0 !important
+    padding: 20px !important
+    box-shadow: 6px 6px 0 var(--pixel-shadow) !important
+    overflow-x: auto !important
+    font-family: 'Press Start 2P', 'Courier New', monospace !important
+    font-size: 10px !important
+    line-height: 1.8 !important
+    
+  code, code[class*="language-"]
+    font-family: 'Press Start 2P', 'Courier New', monospace !important
+    font-size: 10px !important
+    color: var(--pixel-text-primary) !important
+    background: transparent !important
+    text-shadow: none !important
+    
+  // 行内代码
+  :not(pre) > code
+    background: var(--pixel-bg-tertiary) !important
+    border: 2px solid var(--pixel-primary) !important
+    border-radius: 0 !important
+    padding: 2px 6px !important
+    color: var(--pixel-primary) !important
+    font-size: 10px !important
+
+// Prism.js 语法高亮颜色 - 像素游戏风格
+.token
+  &.comment,
+  &.prolog,
+  &.doctype,
+  &.cdata
+    color: var(--pixel-text-muted) !important
+    font-style: italic !important
+  
+  &.punctuation
+    color: var(--pixel-text-primary) !important
+  
+  &.property,
+  &.tag,
+  &.boolean,
+  &.number,
+  &.constant,
+  &.symbol,
+  &.deleted
+    color: var(--pixel-danger) !important
+  
+  &.selector,
+  &.attr-name,
+  &.string,
+  &.char,
+  &.builtin,
+  &.inserted
+    color: var(--pixel-primary) !important
+  
+  &.operator,
+  &.entity,
+  &.url,
+  .language-css &.string,
+  .style &.string
+    color: var(--pixel-accent) !important
+  
+  &.atrule,
+  &.attr-value,
+  &.keyword
+    color: var(--pixel-secondary) !important
+    font-weight: bold !important
+  
+  &.function,
+  &.class-name
+    color: var(--pixel-warning) !important
+  
+  &.regex,
+  &.important,
+  &.variable
+    color: var(--pixel-accent) !important
+
+// 行号样式
+.line-numbers-mode
+  .line-numbers-wrapper
+    background: var(--pixel-bg-secondary) !important
+    border-right: 3px solid var(--pixel-primary) !important
+    color: var(--pixel-text-muted) !important
+    font-family: 'Press Start 2P', 'Courier New', monospace !important
+    font-size: 8px !important
+    line-height: 1.8 !important
+    padding: 20px 8px !important
+    text-align: right !important
+    
+    .line-number
+      color: var(--pixel-text-muted) !important
+
+// 代码组标签
+.code-group
+  border: 3px solid var(--pixel-primary) !important
+  border-radius: 0 !important
+  box-shadow: 6px 6px 0 var(--pixel-shadow) !important
+  
+  .code-group-nav
+    background: var(--pixel-bg-secondary) !important
+    border-bottom: 3px solid var(--pixel-primary) !important
+    
+    .code-group-nav-tab
+      background: transparent !important
+      border: none !important
+      color: var(--pixel-text-secondary) !important
+      font-family: 'Press Start 2P', 'Courier New', monospace !important
+      font-size: 8px !important
+      padding: 8px 16px !important
+      
+      &.active
+        background: var(--pixel-primary) !important
+        color: var(--pixel-bg-primary) !important
+
+// 代码复制按钮
+.code-copy
+  background: var(--pixel-secondary) !important
+  border: 2px solid var(--pixel-border) !important
+  border-radius: 0 !important
+  color: var(--pixel-text-primary) !important
+  font-family: 'Press Start 2P', 'Courier New', monospace !important
+  font-size: 8px !important
+  padding: 4px 8px !important
+  
+  &:hover
+    background: var(--pixel-accent) !important
+    color: var(--pixel-bg-primary) !important
+    transform: translate(-1px, -1px) !important
+    box-shadow: 2px 2px 0 var(--pixel-shadow) !important
+
+// 代码块标题
+.code-title
+  background: var(--pixel-primary) !important
+  color: var(--pixel-bg-primary) !important
+  font-family: 'Press Start 2P', 'Courier New', monospace !important
+  font-size: 10px !important
+  padding: 8px 16px !important
+  border-bottom: 3px solid var(--pixel-border) !important
+
+// 高亮行
+.highlight-lines
+  .highlighted
+    background: rgba(255, 255, 0, 0.1) !important
+    border-left: 4px solid var(--pixel-accent) !important
+
+// 差异显示
+.diff
+  .token
+    &.inserted
+      background: rgba(0, 255, 0, 0.1) !important
+      color: var(--pixel-primary) !important
+    
+    &.deleted
+      background: rgba(255, 0, 0, 0.1) !important
+      color: var(--pixel-danger) !important
+
+// 终端样式
+.terminal
+  background: var(--pixel-bg-tertiary) !important
+  border: 3px solid var(--pixel-primary) !important
+  color: var(--pixel-primary) !important
+  font-family: 'Press Start 2P', 'Courier New', monospace !important
+  
+  .terminal-header
+    background: var(--pixel-bg-secondary) !important
+    border-bottom: 2px solid var(--pixel-primary) !important
+    padding: 8px 16px !important
+    
+    .terminal-title
+      color: var(--pixel-text-primary) !important
+      font-size: 10px !important
+  
+  .terminal-body
+    padding: 16px !important
+    
+    .command-line
+      &:before
+        content: "$ " !important
+        color: var(--pixel-accent) !important
+      
+      color: var(--pixel-text-primary) !important
+      margin-bottom: 8px !important
+
+// 响应式代码块
+@media (max-width: 768px)
+  .theme-default-content
+    pre, pre[class*="language-"]
+      font-size: 8px !important
+      padding: 12px !important
+      margin: 12px 0 !important
+    
+    :not(pre) > code
+      font-size: 8px !important
+      padding: 1px 4px !important
