@@ -3,7 +3,7 @@ import { defineUserConfig } from "vuepress";
 import recoTheme from "vuepress-theme-reco";
 
 export default defineUserConfig({
-  title: "程序猿的笔记", // Changed from "iwangxi Blog"
+  title: "程序猿的VLOG", // Changed from "iwangxi Blog"
   description: "Just to study", // Keeping this as is, can be changed later if needed
   theme: recoTheme({
     style: "@vuepress-reco/style-default",
