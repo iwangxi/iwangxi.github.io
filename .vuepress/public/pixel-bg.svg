@@ -1,0 +1,16 @@
+<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="pixelGrid" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="4" height="4" fill="#000080"/>
+      <rect x="4" y="0" width="4" height="4" fill="#000040"/>
+      <rect x="0" y="4" width="4" height="4" fill="#000040"/>
+      <rect x="4" y="4" width="4" height="4" fill="#000080"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#pixelGrid)"/>
+  <!-- 添加一些像素装饰 -->
+  <rect x="8" y="8" width="4" height="4" fill="#00ff00"/>
+  <rect x="28" y="28" width="4" height="4" fill="#ff00ff"/>
+  <rect x="8" y="28" width="4" height="4" fill="#ffff00"/>
+  <rect x="28" y="8" width="4" height="4" fill="#ff8000"/>
+</svg>

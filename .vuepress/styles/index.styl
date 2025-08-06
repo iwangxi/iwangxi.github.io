@@ -1,0 +1,427 @@
+/**
+ * 像素游戏风格主题样式
+ * Pixel Game Style Theme for VuePress Blog
+ */
+
+// 导入像素字体
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap')
+
+// 导入代码高亮主题
+@import './code-theme.styl'
+
+// 像素游戏调色板
+:root
+  // 主色调 - 经典8位游戏配色
+  --pixel-primary: #00ff00      // 亮绿色
+  --pixel-secondary: #ff00ff    // 品红色
+  --pixel-accent: #ffff00       // 黄色
+  --pixel-warning: #ff8000      // 橙色
+  --pixel-danger: #ff0000       // 红色
+  
+  // 背景色
+  --pixel-bg-primary: #000080   // 深蓝色
+  --pixel-bg-secondary: #000040 // 更深的蓝色
+  --pixel-bg-tertiary: #000020  // 最深的蓝色
+  
+  // 文字色
+  --pixel-text-primary: #ffffff // 白色
+  --pixel-text-secondary: #c0c0c0 // 银色
+  --pixel-text-muted: #808080   // 灰色
+  
+  // 边框和阴影
+  --pixel-border: #ffffff
+  --pixel-shadow: #000000
+
+// 全局字体设置
+*
+  font-family: 'Press Start 2P', 'Courier New', monospace !important
+  image-rendering: pixelated
+  image-rendering: -moz-crisp-edges
+  image-rendering: crisp-edges
+
+// 主体背景
+body
+  background: var(--pixel-bg-primary)
+  background-image: url('/pixel-bg.svg')
+  background-size: 40px 40px
+  background-repeat: repeat
+  color: var(--pixel-text-primary)
+  line-height: 1.6
+  overflow-x: hidden
+
+// 像素化按钮样式
+.pixel-btn
+  background: var(--pixel-primary)
+  color: var(--pixel-bg-primary)
+  border: 3px solid var(--pixel-border)
+  padding: 8px 16px
+  font-size: 12px
+  text-transform: uppercase
+  cursor: pointer
+  position: relative
+  transition: none
+  
+  &:before
+    content: ''
+    position: absolute
+    top: -3px
+    left: -3px
+    right: -3px
+    bottom: -3px
+    background: var(--pixel-shadow)
+    z-index: -1
+  
+  &:hover
+    background: var(--pixel-accent)
+    transform: translate(-2px, -2px)
+    
+    &:before
+      transform: translate(4px, 4px)
+  
+  &:active
+    transform: translate(0, 0)
+    
+    &:before
+      transform: translate(2px, 2px)
+
+// 导航栏样式
+.navbar
+  background: var(--pixel-bg-secondary) !important
+  border-bottom: 4px solid var(--pixel-primary) !important
+  box-shadow: 0 4px 0 var(--pixel-shadow) !important
+  
+  .navbar-brand
+    font-size: 16px !important
+    color: var(--pixel-primary) !important
+    text-shadow: 2px 2px 0 var(--pixel-shadow) !important
+  
+  .navbar-nav .nav-link
+    color: var(--pixel-text-primary) !important
+    font-size: 10px !important
+    padding: 8px 12px !important
+    border: 2px solid transparent !important
+    margin: 0 2px !important
+    
+    &:hover
+      background: var(--pixel-primary) !important
+      color: var(--pixel-bg-primary) !important
+      border-color: var(--pixel-border) !important
+      transform: translate(-1px, -1px) !important
+      box-shadow: 2px 2px 0 var(--pixel-shadow) !important
+
+// 主内容区域
+.theme-container
+  background: transparent !important
+  
+.page
+  background: var(--pixel-bg-secondary) !important
+  border: 4px solid var(--pixel-primary) !important
+  border-radius: 0 !important
+  margin: 20px !important
+  padding: 20px !important
+  box-shadow: 8px 8px 0 var(--pixel-shadow) !important
+  
+  h1, h2, h3, h4, h5, h6
+    color: var(--pixel-accent) !important
+    text-shadow: 2px 2px 0 var(--pixel-shadow) !important
+    border-bottom: 2px solid var(--pixel-primary) !important
+    padding-bottom: 8px !important
+    margin-bottom: 16px !important
+  
+  p
+    color: var(--pixel-text-primary) !important
+    line-height: 1.8 !important
+    margin-bottom: 16px !important
+  
+  a
+    color: var(--pixel-secondary) !important
+    text-decoration: none !important
+    border-bottom: 1px dotted var(--pixel-secondary) !important
+    
+    &:hover
+      color: var(--pixel-accent) !important
+      border-bottom-color: var(--pixel-accent) !important
+      text-shadow: 1px 1px 0 var(--pixel-shadow) !important
+
+// 代码块样式
+pre, code
+  background: var(--pixel-bg-tertiary) !important
+  border: 2px solid var(--pixel-primary) !important
+  border-radius: 0 !important
+  color: var(--pixel-primary) !important
+  font-family: 'Press Start 2P', 'Courier New', monospace !important
+  
+pre
+  padding: 16px !important
+  margin: 16px 0 !important
+  box-shadow: 4px 4px 0 var(--pixel-shadow) !important
+  
+code
+  padding: 2px 4px !important
+  font-size: 10px !important
+
+// 侧边栏样式
+.sidebar
+  background: var(--pixel-bg-secondary) !important
+  border-right: 4px solid var(--pixel-primary) !important
+  
+  .sidebar-link
+    color: var(--pixel-text-primary) !important
+    border-left: 4px solid transparent !important
+    padding: 8px 16px !important
+    font-size: 10px !important
+    
+    &:hover, &.active
+      background: var(--pixel-primary) !important
+      color: var(--pixel-bg-primary) !important
+      border-left-color: var(--pixel-accent) !important
+
+// 首页横幅样式
+.hero
+  background: linear-gradient(45deg, var(--pixel-bg-primary), var(--pixel-bg-secondary)) !important
+  border: 4px solid var(--pixel-primary) !important
+  margin: 20px !important
+  padding: 40px !important
+  text-align: center !important
+  box-shadow: 8px 8px 0 var(--pixel-shadow) !important
+  
+  h1
+    font-size: 24px !important
+    color: var(--pixel-accent) !important
+    text-shadow: 3px 3px 0 var(--pixel-shadow) !important
+    margin-bottom: 20px !important
+    animation: pixelGlow 2s ease-in-out infinite alternate !important
+  
+  .description
+    font-size: 12px !important
+    color: var(--pixel-text-secondary) !important
+    margin-bottom: 30px !important
+  
+  .action
+    .pixel-btn
+      font-size: 14px !important
+      padding: 12px 24px !important
+      margin: 0 8px !important
+
+// 像素发光动画
+@keyframes pixelGlow
+  from
+    text-shadow: 3px 3px 0 var(--pixel-shadow), 0 0 10px var(--pixel-accent)
+  to
+    text-shadow: 3px 3px 0 var(--pixel-shadow), 0 0 20px var(--pixel-accent), 0 0 30px var(--pixel-accent)
+
+// 文章列表样式
+.post-list
+  .post-item
+    background: var(--pixel-bg-secondary) !important
+    border: 3px solid var(--pixel-primary) !important
+    margin-bottom: 20px !important
+    padding: 16px !important
+    box-shadow: 6px 6px 0 var(--pixel-shadow) !important
+    transition: none !important
+    
+    &:hover
+      transform: translate(-2px, -2px) !important
+      box-shadow: 8px 8px 0 var(--pixel-shadow) !important
+    
+    .post-title
+      color: var(--pixel-accent) !important
+      font-size: 14px !important
+      margin-bottom: 8px !important
+      text-shadow: 1px 1px 0 var(--pixel-shadow) !important
+    
+    .post-excerpt
+      color: var(--pixel-text-secondary) !important
+      font-size: 10px !important
+      line-height: 1.6 !important
+
+// 标签样式
+.tag
+  background: var(--pixel-secondary) !important
+  color: var(--pixel-text-primary) !important
+  border: 2px solid var(--pixel-border) !important
+  padding: 4px 8px !important
+  font-size: 8px !important
+  margin: 2px !important
+  display: inline-block !important
+  
+  &:hover
+    background: var(--pixel-accent) !important
+    color: var(--pixel-bg-primary) !important
+    transform: translate(-1px, -1px) !important
+    box-shadow: 2px 2px 0 var(--pixel-shadow) !important
+
+// 分页样式
+.pagination
+  .page-number, .prev, .next
+    background: var(--pixel-primary) !important
+    color: var(--pixel-bg-primary) !important
+    border: 2px solid var(--pixel-border) !important
+    padding: 8px 12px !important
+    margin: 0 4px !important
+    font-size: 10px !important
+    
+    &:hover
+      background: var(--pixel-accent) !important
+      transform: translate(-1px, -1px) !important
+      box-shadow: 2px 2px 0 var(--pixel-shadow) !important
+    
+    &.current
+      background: var(--pixel-secondary) !important
+
+// 响应式设计
+@media (max-width: 768px)
+  .hero h1
+    font-size: 18px !important
+  
+  .navbar-nav .nav-link
+    font-size: 8px !important
+    padding: 6px 8px !important
+  
+  .page
+    margin: 10px !important
+    padding: 15px !important
+  
+  .pixel-btn
+    font-size: 10px !important
+    padding: 6px 12px !important
+
+// 滚动条样式
+::-webkit-scrollbar
+  width: 16px
+
+::-webkit-scrollbar-track
+  background: var(--pixel-bg-tertiary)
+  border: 2px solid var(--pixel-primary)
+
+::-webkit-scrollbar-thumb
+  background: var(--pixel-primary)
+  border: 2px solid var(--pixel-border)
+
+  &:hover
+    background: var(--pixel-accent)
+
+// 像素化图片
+img
+  image-rendering: pixelated
+  image-rendering: -moz-crisp-edges
+  image-rendering: crisp-edges
+  border: 2px solid var(--pixel-primary)
+  box-shadow: 4px 4px 0 var(--pixel-shadow)
+
+// 表格样式
+table
+  border-collapse: separate
+  border-spacing: 0
+  border: 3px solid var(--pixel-primary)
+  background: var(--pixel-bg-secondary)
+
+  th, td
+    border: 1px solid var(--pixel-primary)
+    padding: 8px 12px
+    font-size: 10px
+
+  th
+    background: var(--pixel-primary)
+    color: var(--pixel-bg-primary)
+    text-transform: uppercase
+
+// 引用块样式
+blockquote
+  background: var(--pixel-bg-tertiary)
+  border-left: 6px solid var(--pixel-secondary)
+  margin: 16px 0
+  padding: 16px
+  box-shadow: 4px 4px 0 var(--pixel-shadow)
+
+  p
+    margin: 0
+    font-style: italic
+    color: var(--pixel-text-secondary)
+
+// 输入框样式
+input, textarea, select
+  background: var(--pixel-bg-tertiary)
+  border: 3px solid var(--pixel-primary)
+  color: var(--pixel-text-primary)
+  padding: 8px
+  font-family: 'Press Start 2P', monospace
+  font-size: 10px
+
+  &:focus
+    outline: none
+    border-color: var(--pixel-accent)
+    box-shadow: 0 0 10px var(--pixel-accent)
+
+// 加载动画
+@keyframes pixelSpin
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+.loading
+  display: inline-block
+  width: 16px
+  height: 16px
+  background: var(--pixel-primary)
+  animation: pixelSpin 1s linear infinite
+
+// 通知/提示框样式
+.notification
+  background: var(--pixel-bg-secondary)
+  border: 3px solid var(--pixel-accent)
+  padding: 16px
+  margin: 16px 0
+  box-shadow: 6px 6px 0 var(--pixel-shadow)
+
+  &.success
+    border-color: var(--pixel-primary)
+
+  &.warning
+    border-color: var(--pixel-warning)
+
+  &.error
+    border-color: var(--pixel-danger)
+
+// 像素化分隔线
+hr
+  border: none
+  height: 4px
+  background: var(--pixel-primary)
+  margin: 20px 0
+  box-shadow: 0 2px 0 var(--pixel-shadow)
+
+// 搜索框特殊样式
+.search-box
+  input
+    background: var(--pixel-bg-tertiary)
+    border: 2px solid var(--pixel-primary)
+    border-radius: 0
+    color: var(--pixel-text-primary)
+
+    &:focus
+      border-color: var(--pixel-accent)
+      box-shadow: 0 0 8px var(--pixel-accent)
+
+// 面包屑导航
+.breadcrumb
+  background: var(--pixel-bg-secondary)
+  border: 2px solid var(--pixel-primary)
+  padding: 8px 16px
+  margin-bottom: 16px
+
+  a
+    color: var(--pixel-secondary)
+
+    &:hover
+      color: var(--pixel-accent)
+
+// 页脚样式
+.footer
+  background: var(--pixel-bg-secondary)
+  border-top: 4px solid var(--pixel-primary)
+  padding: 20px
+  text-align: center
+  color: var(--pixel-text-secondary)
+  font-size: 10px

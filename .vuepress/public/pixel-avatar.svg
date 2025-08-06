@@ -1,0 +1,49 @@
+<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+  <!-- 像素风格头像 - 更大尺寸 -->
+  <g>
+    <!-- 背景 -->
+    <rect x="0" y="0" width="128" height="128" fill="#000080"/>
+    
+    <!-- 头部 -->
+    <rect x="32" y="16" width="64" height="64" fill="#ffdbac"/>
+    <rect x="24" y="24" width="16" height="48" fill="#ffdbac"/>
+    <rect x="88" y="24" width="16" height="48" fill="#ffdbac"/>
+    
+    <!-- 头发 -->
+    <rect x="32" y="8" width="64" height="16" fill="#8b4513"/>
+    <rect x="24" y="16" width="16" height="16" fill="#8b4513"/>
+    <rect x="88" y="16" width="16" height="16" fill="#8b4513"/>
+    
+    <!-- 眼镜框架 -->
+    <rect x="36" y="28" width="16" height="16" fill="none" stroke="#000000" stroke-width="3"/>
+    <rect x="76" y="28" width="16" height="16" fill="none" stroke="#000000" stroke-width="3"/>
+    <rect x="52" y="34" width="24" height="4" fill="#000000"/>
+    
+    <!-- 眼睛 -->
+    <rect x="40" y="32" width="8" height="8" fill="#000000"/>
+    <rect x="80" y="32" width="8" height="8" fill="#000000"/>
+    
+    <!-- 鼻子 -->
+    <rect x="60" y="44" width="8" height="4" fill="#ffb380"/>
+    
+    <!-- 嘴巴 -->
+    <rect x="56" y="52" width="16" height="4" fill="#000000"/>
+    
+    <!-- 身体 -->
+    <rect x="40" y="80" width="48" height="40" fill="#4169e1"/>
+    
+    <!-- 手臂 -->
+    <rect x="24" y="88" width="16" height="24" fill="#ffdbac"/>
+    <rect x="88" y="88" width="16" height="24" fill="#ffdbac"/>
+    
+    <!-- 装饰性代码符号 -->
+    <rect x="8" y="8" width="4" height="4" fill="#00ff00"/>
+    <rect x="116" y="8" width="4" height="4" fill="#ff00ff"/>
+    <rect x="8" y="116" width="4" height="4" fill="#ffff00"/>
+    <rect x="116" y="116" width="4" height="4" fill="#ff8000"/>
+    
+    <!-- 代码括号装饰 -->
+    <text x="8" y="64" font-family="Press Start 2P" font-size="12" fill="#00ff00">{</text>
+    <text x="112" y="64" font-family="Press Start 2P" font-size="12" fill="#00ff00">}</text>
+  </g>
+</svg>
