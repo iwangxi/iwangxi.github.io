@@ -7,7 +7,7 @@ modules:
   - Footer
 bannerBrand:
   bgImage: '/bg.svg'
-  title: "程序猿的笔记" # Changed
+  title: "程序猿的VLOG" # Changed
   description: "一个记录技术学习、问题解决和项目经验的个人博客。" # Changed
   tagline: "分享知识，记录成长。" # Changed
   buttons:
@@ -23,7 +23,7 @@ actionText: About # Kept as is, may need review later
 actionLink: /views/other/about # Kept as is, may need review later
 ---
 
-欢迎来到程序猿的笔记，一个基于 VuePress 和 vuepress-theme-reco 构建的博客。
+欢迎来到程序猿的VLOG，一个基于 VuePress 和 vuepress-theme-reco 构建的博客。
 
 ## 快速开始
 
